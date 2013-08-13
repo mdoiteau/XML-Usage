@@ -48,6 +48,7 @@ public class JaxbManipulationTest {
         Assert.assertNotNull(motos.getVehicules());
         Assert.assertEquals(motos.getVehicules().size(), 2);
         
+        //Test pour le speed triple
         Vehicule speed = motos.getVehicules().get(0);
         Assert.assertNotNull(speed);
         Assert.assertEquals(speed.getMarque(), "Triumph");

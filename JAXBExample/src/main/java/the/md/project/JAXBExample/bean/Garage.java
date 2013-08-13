@@ -18,7 +18,7 @@ public class Garage {
 	private List<VehiculeGroup> vehiculeGroup = new ArrayList<VehiculeGroup>();
 
 	/**
-	 * getter vehiculeGroup
+	 * getter sur le vehiculeGroup
 	 * @return the vehiculeGroup
 	 */
 	@XmlElement(name = "group")

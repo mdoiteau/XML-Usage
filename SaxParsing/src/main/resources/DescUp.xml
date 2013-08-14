@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<garage> 
+    <group type="moto"> 
+        <vehicule marque="Triumph" cylindree="1050">Speed Triple</vehicule> 
+        <vehicule marque="Triumph" cylindree="675">Street Triple</vehicule> 
+    </group> 
+    <group type="auto"> 
+        <vehicule marque="Lotus" cylindree="1800" >Elise S1 MMC</vehicule> 
+        <vehicule marque="Citroën" cylindree="1600">Saxo VTS 16V</vehicule> 
+    </group> 
+</garage> 

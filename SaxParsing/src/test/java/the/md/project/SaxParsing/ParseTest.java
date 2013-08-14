@@ -23,6 +23,7 @@ import the.md.project.SaxParsing.xml.SaxParser;
  */
 public class ParseTest {
 
+	/** Le path du fichier à parser */
 	String fileXmlFullPath = "./src/main/resources/DescUp.xml";
 
 	@Test

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<garage>
+    <group>
+        <vehicule cylindree="1700" marque="Yamaha">MT-01</vehicule>
+        <vehicule cylindree="1000" marque="Yamaha">FZ1</vehicule>
+    </group>
+    <group>
+        <vehicule cylindree="3000" marque="BMW">130i</vehicule>
+    </group>
+</garage>

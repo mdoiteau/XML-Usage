@@ -17,19 +17,19 @@ import the.md.project.JAXBExample.bean.Vehicule;
 import the.md.project.JAXBExample.bean.VehiculeGroup;
 
 /**
- * Class de test pour la manipulation d'objets XML via JAXB
+ * Class de test pour tester le chargement de classe Java à partir de fichier XML
  * Les tags JAXB se trouve dans les bean, au niveau des getters
  * @author mdoiteau
  *
  */
-public class JaxbManipulationTest {
+public class JaxbLoadTest {
 
 	/** garage */
 	private Garage garage;
 	
 	@Before
     public void before() throws FileNotFoundException { 
-        InputStream xmlStream = new FileInputStream("./src/main/resources/Desc.xml"); 
+        InputStream xmlStream = new FileInputStream("./src/main/resources/DescUp.xml"); 
         garage = JAXB.unmarshal(xmlStream, Garage.class); 
     } 
 	
@@ -52,13 +52,13 @@ public class JaxbManipulationTest {
         Vehicule speed = motos.getVehicules().get(0);
         Assert.assertNotNull(speed);
         Assert.assertEquals(speed.getMarque(), "Triumph");
-        Assert.assertEquals(speed.getCylindree(), "1050");
+        Assert.assertTrue(speed.getCylindree()==1050L);
         Assert.assertEquals(speed.getModele(), "Speed Triple");
         
         Vehicule street = motos.getVehicules().get(1);
         Assert.assertNotNull(street);
         Assert.assertEquals(street.getMarque(), "Triumph");
-        Assert.assertEquals(street.getCylindree(), "675");
+        Assert.assertTrue(street.getCylindree()==675L);
         Assert.assertEquals(street.getModele(), "Street Triple");
         
         //Test des autos	
@@ -71,13 +71,13 @@ public class JaxbManipulationTest {
         Vehicule elise = autos.getVehicules().get(0);
         Assert.assertNotNull(elise);
         Assert.assertEquals(elise.getMarque(), "Lotus");
-        Assert.assertEquals(elise.getCylindree(), "1800");
+        Assert.assertTrue(elise.getCylindree()==1800L);
         Assert.assertEquals(elise.getModele(), "Elise S1 MMC");
         
         Vehicule saxo = autos.getVehicules().get(1);
         Assert.assertNotNull(saxo);
         Assert.assertEquals(saxo.getMarque(), "Citroën");
-        Assert.assertEquals(saxo.getCylindree(), "1600");
+        Assert.assertTrue(saxo.getCylindree()==1600L);
         Assert.assertEquals(saxo.getModele(), "Saxo VTS 16V");
     }
 	

@@ -3,6 +3,8 @@ package the.md.project.JAXBExample.bean;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
@@ -11,18 +13,20 @@ import javax.xml.bind.annotation.XmlElement;
  * @author mdoiteau
  *
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VehiculeGroup {
 
 	/** Type du groupe de véhicules */
+	@XmlAttribute
 	private String type; 
 	  
 	/** Liste des véhicules */
+	@XmlElement(name = "vehicule")
     private List<Vehicule> vehicules = new ArrayList<Vehicule>();
 
 	/** getter type
 	 * @return the type
 	 */
-    @XmlAttribute
 	public String getType() {
 		return type;
 	}
@@ -37,7 +41,6 @@ public class VehiculeGroup {
 	/** getter vehicules
 	 * @return the vehicules
 	 */
-	@XmlElement(name = "vehicule")
 	public List<Vehicule> getVehicules() {
 		return vehicules;
 	}

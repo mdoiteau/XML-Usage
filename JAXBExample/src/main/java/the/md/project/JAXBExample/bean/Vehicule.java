@@ -1,5 +1,7 @@
 package the.md.project.JAXBExample.bean;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;
 
@@ -8,20 +10,23 @@ import javax.xml.bind.annotation.XmlValue;
  * @author mdoiteau
  *
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Vehicule {
 
 	/** Marque du véhicule */
+	@XmlAttribute
 	private String marque;
 	/** Cylindrée du moteur du véhicule */
-	private String cylindree;
+	@XmlAttribute
+	private Long cylindree;
 	/** Modèle ou nom commercial du véhicule */
+	@XmlValue
 	private String modele;
 	
 	/**
 	 * getter marque
 	 * @return the marque
 	 */
-	@XmlAttribute
 	public String getMarque() {
 		return marque;
 	}
@@ -31,23 +36,23 @@ public class Vehicule {
 	public void setMarque(String marque) {
 		this.marque = marque;
 	}
+	
 	/** getter cylindree
 	 * @return the cylindree
 	 */
-	@XmlAttribute
-	public String getCylindree() {
+	public Long getCylindree() {
 		return cylindree;
 	}
 	/** setter cylindree
 	 * @param cylindree the cylindree to set
 	 */
-	public void setCylindree(String cylindree) {
+	public void setCylindree(Long cylindree) {
 		this.cylindree = cylindree;
 	}
+	
 	/** getter modele
 	 * @return the modele
 	 */
-	@XmlValue
 	public String getModele() {
 		return modele;
 	}

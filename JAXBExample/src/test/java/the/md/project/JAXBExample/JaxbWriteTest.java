@@ -76,39 +76,39 @@ public class JaxbWriteTest {
 		// Vérification
 		Assert.assertNotNull(garageToVerify);
 		Assert.assertNotNull(garageToVerify.getVehiculeGroup());
-		Assert.assertEquals(garageToVerify.getVehiculeGroup().size(), 2);
+		Assert.assertEquals(2, garageToVerify.getVehiculeGroup().size());
 
 		// Test des motos
 		VehiculeGroup motos = garageToVerify.getVehiculeGroup().get(0);
 		Assert.assertNotNull(motos);
-		Assert.assertEquals(motos.getType(), "moto");
+		Assert.assertEquals("moto", motos.getType());
 		Assert.assertNotNull(motos.getVehicules());
-		Assert.assertEquals(motos.getVehicules().size(), 2);
+		Assert.assertEquals(2, motos.getVehicules().size());
 
 		Vehicule mt = motos.getVehicules().get(0);
 		Assert.assertNotNull(mt);
-		Assert.assertEquals(mt.getMarque(), "Yamaha");
+		Assert.assertEquals("Yamaha", mt.getMarque());
 		Assert.assertTrue(mt.getCylindree() == 1700L);
-		Assert.assertEquals(mt.getModele(), "MT-01");
+		Assert.assertEquals("MT-01", mt.getModele());
 
 		Vehicule fz1 = motos.getVehicules().get(1);
 		Assert.assertNotNull(fz1);
-		Assert.assertEquals(fz1.getMarque(), "Yamaha");
+		Assert.assertEquals("Yamaha", fz1.getMarque());
 		Assert.assertTrue(fz1.getCylindree() == 1000L);
-		Assert.assertEquals(fz1.getModele(), "FZ1");
+		Assert.assertEquals("FZ1", fz1.getModele());
 
 		// Test des autos
 		VehiculeGroup autos = garageToVerify.getVehiculeGroup().get(1);
 		Assert.assertNotNull(autos);
-		Assert.assertEquals(autos.getType(), "auto");
+		Assert.assertEquals("auto", autos.getType());
 		Assert.assertNotNull(autos.getVehicules());
-		Assert.assertEquals(autos.getVehicules().size(), 1);
+		Assert.assertEquals(1, autos.getVehicules().size());
 
 		Vehicule bmw = autos.getVehicules().get(0);
 		Assert.assertNotNull(bmw);
-		Assert.assertEquals(bmw.getMarque(), "BMW");
+		Assert.assertEquals("BMW", bmw.getMarque());
 		Assert.assertTrue(bmw.getCylindree() == 3000L);
-		Assert.assertEquals(bmw.getModele(), "130i");
+		Assert.assertEquals("130i", bmw.getModele());
 
 	}
 

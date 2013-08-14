@@ -44,41 +44,41 @@ public class JaxbLoadTest {
         //Test des motos
         VehiculeGroup motos = vehiculeGroups.get(0);
         Assert.assertNotNull(motos);
-        Assert.assertEquals(motos.getType(), "moto");
+        Assert.assertEquals("moto", motos.getType());
         Assert.assertNotNull(motos.getVehicules());
-        Assert.assertEquals(motos.getVehicules().size(), 2);
+        Assert.assertEquals(2, motos.getVehicules().size());
         
         //Test pour le speed triple
         Vehicule speed = motos.getVehicules().get(0);
         Assert.assertNotNull(speed);
-        Assert.assertEquals(speed.getMarque(), "Triumph");
+        Assert.assertEquals("Triumph", speed.getMarque());
         Assert.assertTrue(speed.getCylindree()==1050L);
-        Assert.assertEquals(speed.getModele(), "Speed Triple");
+        Assert.assertEquals("Speed Triple", speed.getModele());
         
         Vehicule street = motos.getVehicules().get(1);
         Assert.assertNotNull(street);
-        Assert.assertEquals(street.getMarque(), "Triumph");
+        Assert.assertEquals("Triumph", street.getMarque());
         Assert.assertTrue(street.getCylindree()==675L);
-        Assert.assertEquals(street.getModele(), "Street Triple");
+        Assert.assertEquals("Street Triple", street.getModele());
         
         //Test des autos	
         VehiculeGroup autos = vehiculeGroups.get(1);
         Assert.assertNotNull(autos);
-        Assert.assertEquals(autos.getType(), "auto");
+        Assert.assertEquals("auto", autos.getType());
         Assert.assertNotNull(autos.getVehicules());
-        Assert.assertEquals(autos.getVehicules().size(), 2);
+        Assert.assertEquals(2, autos.getVehicules().size());
         
         Vehicule elise = autos.getVehicules().get(0);
         Assert.assertNotNull(elise);
-        Assert.assertEquals(elise.getMarque(), "Lotus");
+        Assert.assertEquals("Lotus", elise.getMarque());
         Assert.assertTrue(elise.getCylindree()==1800L);
-        Assert.assertEquals(elise.getModele(), "Elise S1 MMC");
+        Assert.assertEquals("Elise S1 MMC", elise.getModele());
         
         Vehicule saxo = autos.getVehicules().get(1);
         Assert.assertNotNull(saxo);
-        Assert.assertEquals(saxo.getMarque(), "Citroën");
+        Assert.assertEquals("Citroën", saxo.getMarque());
         Assert.assertTrue(saxo.getCylindree()==1600L);
-        Assert.assertEquals(saxo.getModele(), "Saxo VTS 16V");
+        Assert.assertEquals("Saxo VTS 16V", saxo.getModele());
     }
 	
 }
